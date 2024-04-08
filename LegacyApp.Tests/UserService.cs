@@ -18,13 +18,10 @@ public class UserService : IUserService
 
     private void ValidateUser(User user)
     {
-        // Walidacja użytkownika
         if (user == null)
             throw new ArgumentNullException(nameof(user));
 
         if (string.IsNullOrWhiteSpace(user.Name))
             throw new ArgumentException("User name cannot be empty", nameof(user.Name));
-
-        // Możemy dodać więcej walidacji w przyszłości
     }
 }
